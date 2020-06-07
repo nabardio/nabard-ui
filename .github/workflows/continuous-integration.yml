@@ -1,0 +1,27 @@
+---
+name: Continous Integration
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    name: Lint Checking
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - use: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install --dev
+
+      - name: Eslint
+        run: npm lint
