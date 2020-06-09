@@ -1,0 +1,38 @@
+name: Continuous Delivery
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12.18.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.18.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn run next build
+
+      - name: Export static files
+        run: yarn run next export
+
+      - name: Install minio client
+        run: wget https://dl.min.io/client/mc/release/linux-amd64/mc && chmod a+x mc
+
+      - name: Configure minio client
+        run: >-
+          ./mc config host add nabard 
+          https://cdn.nabard.io ${{ secrets.S3_ACCESS_KEY }} ${{ secrets.S3_SECRET_KEY }}
+
+      - name: Upload static files
+        run: ./mc mirror --remove ./out nabard/nabard-ui
