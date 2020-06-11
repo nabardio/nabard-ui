@@ -1,3 +1,4 @@
+import 'semantic/dist/semantic.min.css'
 import './styles.css'
 
 export default function App({ Component, pageProps }) {

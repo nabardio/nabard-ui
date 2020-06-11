@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build-semantic": "cd src/semantic && gulp build-css build-assets",
+    "watch-semantic": "cd src/semantic && yarn build-semantic && gulp watch"
   },
   "dependencies": {
+    "fomantic-ui": "^2.8.5",
     "next": "9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "devDependencies": {
     "@types/node": "^14.0.12",
@@ -23,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "gulp": "^4.0.2",
     "typescript": "^3.9.5"
   }
 }
