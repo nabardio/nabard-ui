@@ -1,6 +1,7 @@
+import React from 'react';
 import { Button, Grid, Image, Menu } from 'semantic-ui-react';
 
-export default function Header() {
+export default function Header(): JSX.Element {
     return (
         <Menu borderless secondary fixed="top">
             <Grid container columns={3} verticalAlign="middle" padded="vertically">
@@ -23,4 +24,4 @@ export default function Header() {
             </Grid>
         </Menu>
     );
-};
+}
