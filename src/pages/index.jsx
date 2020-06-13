@@ -1,5 +1,6 @@
 import Header from 'components/header';
 import Head from 'next/head';
+import { Image } from 'semantic-ui-react';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <section>
           <Header />
+          <Image src="/bg.jpg" />
         </section>
         <h1 className="title">
           Welcome to
@@ -19,13 +21,14 @@ export default function Home() {
           <a href="https://nabard.io">Nabard.io!</a>
         </h1>
 
-        <p className="description">
-          Coming soon!
-        </p>
+        <p className="description">Coming soon!</p>
       </main>
 
       <footer>
         <a href="https://github.com/nabardio">GitHub</a>
+        <a href="https://www.freepik.com/free-photos-vectors/background">
+          Background vector created by freepik - www.freepik.com
+        </a>
       </footer>
     </>
   );
