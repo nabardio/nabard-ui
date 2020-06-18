@@ -1,4 +1,5 @@
 import Header from 'components/header';
+import RobotList from 'containers/robotList';
 import Head from 'next/head';
 import { Image } from 'semantic-ui-react';
 
@@ -14,6 +15,9 @@ export default function Home() {
         <section>
           <Header />
           <Image src="/bg.jpg" />
+        </section>
+        <section>
+          <RobotList limit={4} />
         </section>
         <h1 className="title">
           Welcome to
