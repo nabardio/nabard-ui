@@ -1,3 +1,4 @@
+import Footer from 'components/footer';
 import Header from 'components/header';
 import RobotList from 'containers/robotList';
 import Head from 'next/head';
@@ -28,12 +29,7 @@ export default function Home() {
         <p className="description">Coming soon!</p>
       </main>
 
-      <footer>
-        <a href="https://github.com/nabardio">GitHub</a>
-        <a href="https://www.freepik.com/free-photos-vectors/background">
-          Background vector created by freepik - www.freepik.com
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 }
