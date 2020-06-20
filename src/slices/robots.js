@@ -10,7 +10,7 @@ export const fetchRobots = createAsyncThunk('robots/fetchRobots',
       // TODO: Handle this error
       console.error('ERROR: ', error);
     }
-    return [];
+    return { next: null, previous: null, results: [] };
   });
 
 const robotsSlice = createSlice({
