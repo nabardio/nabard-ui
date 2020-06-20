@@ -25,7 +25,7 @@ const RobotList = ({ limit }) => {
       <Card.Group itemsPerRow={4} centered style={{ clear: 'both' }}>
         {robots.slice(0, limit).map((robot) => (
           <Card key={robot.id}>
-            <Image src={robot.avatar} wrapped ui={false} size="tiny" />
+            <Image src={robot.avatar || '/robot.jpg'} wrapped ui={false} size="tiny" />
             <Card.Content>
               <Card.Header as="h3">{robot.name}</Card.Header>
             </Card.Content>
