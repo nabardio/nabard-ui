@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
 
       <main>
+        <Header />
         <section>
-          <Header />
           <Image src="/bg.jpg" />
         </section>
         <section>
