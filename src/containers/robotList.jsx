@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Card, Container, Header, Image } from 'semantic-ui-react';
+import {
+  Button, Card, Container, Header, Image,
+} from 'semantic-ui-react';
 import { fetchRobots, selectRobots } from 'slices/robots';
 
 const RobotList = ({ limit }) => {
