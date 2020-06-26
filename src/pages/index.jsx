@@ -19,7 +19,7 @@ export default function Home() {
         <section>
           <Image src="/bg.jpg" />
         </section>
-        <section style={{ paddingTop: '5vh', paddingBottom: '5vh' }}>
+        <section style={{ paddingTop: '5vh', paddingBottom: '5vh', backgroundColor: '#fff' }}>
           <RobotList limit={4} />
         </section>
         <section style={{
