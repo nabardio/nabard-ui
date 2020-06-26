@@ -5,8 +5,12 @@
 First, run the development server:
 
 ```bash
+npm run build-semantic
 npm run dev
+
 # or
+
+yarn build-semantic
 yarn dev
 ```
 
